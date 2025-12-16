@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include waplytics *.css
+recursive-include waplytics *.csv
+recursive-include waplytics *.html
+recursive-include waplytics *.ico
+recursive-include waplytics *.js
+recursive-include waplytics *.json
+recursive-include waplytics *.md
+recursive-include waplytics *.png
+recursive-include waplytics *.py
+recursive-include waplytics *.svg
+recursive-include waplytics *.txt
+recursive-exclude waplytics *.pyc
