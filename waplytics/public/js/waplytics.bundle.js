@@ -1,1 +1,1 @@
-// Waplytics JS
+console.log("Waplytics Bundle Loaded");
