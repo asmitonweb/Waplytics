@@ -1,8 +1,0 @@
-{
-    "js/waplytics.bundle.js": [
-        "public/js/waplytics.bundle.js"
-    ],
-    "css/waplytics.bundle.css": [
-        "public/css/waplytics.bundle.css"
-    ]
-}
