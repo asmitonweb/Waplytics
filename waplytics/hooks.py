@@ -2,7 +2,7 @@ app_name = "waplytics"
 app_title = "Waplytics"
 app_publisher = "Asmit"
 app_description = "The Ultimate Open-Source WhatsApp Analytics Engine"
-app_email = "hello@asmitonweb.com"
+app_email = "asmitonweb@tuta.io"
 app_license = "mit"
 
 # Apps
