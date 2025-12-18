@@ -1,8 +1,8 @@
 app_name = "waplytics"
 app_title = "Waplytics"
-app_publisher = "Antigravity"
+app_publisher = "Asmit"
 app_description = "The Ultimate Open-Source WhatsApp Analytics Engine"
-app_email = "antigravity@example.com"
+app_email = "hello@asmitonweb.com"
 app_license = "mit"
 
 # Apps

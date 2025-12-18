@@ -1,22 +1,23 @@
 {
     "actions": [],
-    "autoname": "format:LINK-{MM}{YY}-{#####}",
-    "creation": "2024-12-16 12:00:00.000000",
+    "creation": "2024-05-18 10:00:00.000000",
     "doctype": "DocType",
     "engine": "InnoDB",
     "field_order": [
-        "original_url",
         "short_code",
-        "column_break_1",
+        "original_url",
         "campaign",
-        "utm_section",
-        "utm_source",
-        "utm_medium",
-        "utm_campaign",
-        "stats_section",
-        "total_clicks"
+        "click_count"
     ],
     "fields": [
+        {
+            "fieldname": "short_code",
+            "fieldtype": "Data",
+            "label": "Short Code",
+            "reqd": 1,
+            "unique": 1,
+            "in_list_view": 1
+        },
         {
             "fieldname": "original_url",
             "fieldtype": "Data",
@@ -24,63 +25,22 @@
             "reqd": 1
         },
         {
-            "fieldname": "short_code",
-            "fieldtype": "Data",
-            "label": "Short Code",
-            "unique": 1,
-            "read_only": 1
-        },
-        {
-            "fieldname": "column_break_1",
-            "fieldtype": "Column Break"
-        },
-        {
             "fieldname": "campaign",
-            "fieldtype": "Dynamic Link",
+            "fieldtype": "Link",
             "label": "Campaign",
-            "options": "doctype"
+            "options": "WaCampaign"
         },
         {
-            "fieldname": "utm_section",
-            "fieldtype": "Section Break",
-            "label": "UTM Parameters"
-        },
-        {
-            "default": "whatsapp",
-            "fieldname": "utm_source",
-            "fieldtype": "Data",
-            "label": "UTM Source"
-        },
-        {
-            "default": "waplytics",
-            "fieldname": "utm_medium",
-            "fieldtype": "Data",
-            "label": "UTM Medium"
-        },
-        {
-            "fieldname": "utm_campaign",
-            "fieldtype": "Data",
-            "label": "UTM Campaign"
-        },
-        {
-            "fieldname": "stats_section",
-            "fieldtype": "Section Break",
-            "label": "Statistics"
-        },
-        {
-            "default": "0",
-            "fieldname": "total_clicks",
+            "fieldname": "click_count",
             "fieldtype": "Int",
-            "label": "Total Clicks",
-            "read_only": 1
+            "label": "Click Count",
+            "read_only": 1,
+            "in_list_view": 1
         }
     ],
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2024-12-16 12:00:00.000000",
-    "modified_by": "Administrator",
+    "modified": "2024-05-18 10:00:00.000000",
     "module": "Waplytics",
-    "name": "Wa Link Tracker",
+    "name": "WaLinkTracker",
     "owner": "Administrator",
     "permissions": [
         {
@@ -95,8 +55,5 @@
             "share": 1,
             "write": 1
         }
-    ],
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "track_changes": 1
+    ]
 }

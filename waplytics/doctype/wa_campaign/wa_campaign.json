@@ -1,0 +1,107 @@
+{
+    "actions": [],
+    "creation": "2024-05-18 10:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "title",
+        "status",
+        "schedule_time",
+        "template",
+        "audience_query",
+        "column_break_1",
+        "total_messages",
+        "sent_count",
+        "delivered_count",
+        "read_count",
+        "click_count"
+    ],
+    "fields": [
+        {
+            "fieldname": "title",
+            "fieldtype": "Data",
+            "label": "Campaign Title",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Draft\nScheduled\nIn Progress\nCompleted\nFailed",
+            "default": "Draft",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "schedule_time",
+            "fieldtype": "Datetime",
+            "label": "Schedule Time"
+        },
+        {
+            "fieldname": "template",
+            "fieldtype": "Link",
+            "label": "Message Template",
+            "options": "WaTemplate",
+            "reqd": 1
+        },
+        {
+            "fieldname": "audience_query",
+            "fieldtype": "Small Text",
+            "label": "Audience Filter (SQL)",
+            "description": "SQL WHERE clause for filtering Customers/Leads"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "total_messages",
+            "fieldtype": "Int",
+            "label": "Total Audience Size",
+            "read_only": 1
+        },
+        {
+            "fieldname": "sent_count",
+            "fieldtype": "Int",
+            "label": "Sent",
+            "read_only": 1
+        },
+        {
+            "fieldname": "delivered_count",
+            "fieldtype": "Int",
+            "label": "Delivered",
+            "read_only": 1
+        },
+        {
+            "fieldname": "read_count",
+            "fieldtype": "Int",
+            "label": "Read",
+            "read_only": 1
+        },
+        {
+            "fieldname": "click_count",
+            "fieldtype": "Int",
+            "label": "Clicks",
+            "read_only": 1
+        }
+    ],
+    "links": [],
+    "modified": "2024-05-18 10:00:00.000000",
+    "module": "Waplytics",
+    "name": "WaCampaign",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ]
+}
