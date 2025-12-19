@@ -1,15 +1,17 @@
 {
     "actions": [],
-    "creation": "2024-05-18 10:00:00.000000",
+    "allow_rename": 1,
+    "creation": "2024-05-22 10:00:00.000000",
     "doctype": "DocType",
     "engine": "InnoDB",
     "field_order": [
         "title",
         "status",
         "schedule_time",
+        "section_break_config",
         "template",
         "audience_query",
-        "column_break_1",
+        "section_break_stats",
         "total_messages",
         "sent_count",
         "delivered_count",
@@ -20,17 +22,18 @@
         {
             "fieldname": "title",
             "fieldtype": "Data",
+            "in_list_view": 1,
             "label": "Campaign Title",
-            "reqd": 1,
-            "in_list_view": 1
+            "reqd": 1
         },
         {
             "fieldname": "status",
             "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
             "label": "Status",
             "options": "Draft\nScheduled\nIn Progress\nCompleted\nFailed",
-            "default": "Draft",
-            "in_list_view": 1
+            "default": "Draft"
         },
         {
             "fieldname": "schedule_time",
@@ -38,26 +41,32 @@
             "label": "Schedule Time"
         },
         {
+            "fieldname": "section_break_config",
+            "fieldtype": "Section Break",
+            "label": "Configuration"
+        },
+        {
             "fieldname": "template",
             "fieldtype": "Link",
-            "label": "Message Template",
+            "label": "Template",
             "options": "WaTemplate",
             "reqd": 1
         },
         {
             "fieldname": "audience_query",
-            "fieldtype": "Small Text",
-            "label": "Audience Filter (SQL)",
-            "description": "SQL WHERE clause for filtering Customers/Leads"
+            "fieldtype": "Code",
+            "label": "Audience Query (SQL WHERE)",
+            "options": "SQL"
         },
         {
-            "fieldname": "column_break_1",
-            "fieldtype": "Column Break"
+            "fieldname": "section_break_stats",
+            "fieldtype": "Section Break",
+            "label": "Statistics"
         },
         {
             "fieldname": "total_messages",
             "fieldtype": "Int",
-            "label": "Total Audience Size",
+            "label": "Total Messages",
             "read_only": 1
         },
         {
@@ -85,8 +94,10 @@
             "read_only": 1
         }
     ],
+    "is_submittable": 1,
     "links": [],
-    "modified": "2024-05-18 10:00:00.000000",
+    "modified": "2024-05-22 10:00:00.000000",
+    "modified_by": "Administrator",
     "module": "Waplytics",
     "name": "WaCampaign",
     "owner": "Administrator",
@@ -101,7 +112,11 @@
             "report": 1,
             "role": "System Manager",
             "share": 1,
-            "write": 1
+            "write": 1,
+            "submit": 1
         }
-    ]
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
 }

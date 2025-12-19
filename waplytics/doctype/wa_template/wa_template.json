@@ -1,6 +1,7 @@
 {
     "actions": [],
-    "creation": "2024-05-18 10:00:00.000000",
+    "allow_rename": 1,
+    "creation": "2024-05-22 10:00:00.000000",
     "doctype": "DocType",
     "engine": "InnoDB",
     "field_order": [
@@ -14,6 +15,7 @@
         {
             "fieldname": "template_name",
             "fieldtype": "Data",
+            "in_list_view": 1,
             "label": "Template Name (Meta ID)",
             "reqd": 1,
             "unique": 1
@@ -22,8 +24,7 @@
             "fieldname": "category",
             "fieldtype": "Select",
             "label": "Category",
-            "options": "MARKETING\nUTILITY\nAUTHENTICATION",
-            "default": "MARKETING"
+            "options": "MARKETING\nUTILITY\nAUTHENTICATION"
         },
         {
             "fieldname": "language",
@@ -34,8 +35,7 @@
         {
             "fieldname": "body_text",
             "fieldtype": "Text",
-            "label": "Body Text",
-            "description": "Paste the exact text from Meta here for reference."
+            "label": "Body Text"
         },
         {
             "fieldname": "variables",
@@ -44,7 +44,9 @@
             "options": "JSON"
         }
     ],
-    "modified": "2024-05-18 10:00:00.000000",
+    "links": [],
+    "modified": "2024-05-22 10:00:00.000000",
+    "modified_by": "Administrator",
     "module": "Waplytics",
     "name": "WaTemplate",
     "owner": "Administrator",
@@ -61,5 +63,8 @@
             "share": 1,
             "write": 1
         }
-    ]
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
 }
